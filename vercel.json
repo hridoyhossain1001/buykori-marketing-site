@@ -2,6 +2,18 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/client",
+      "destination": "https://client.buykori.app",
+      "permanent": true
+    },
+    {
+      "source": "/client/:path*",
+      "destination": "https://client.buykori.app/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
