@@ -11,6 +11,7 @@
     body{margin:0;min-width:320px;background:#dedede;color:#111827;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
     a{text-decoration:none;color:inherit}
     button,input{font:inherit}
+    button{font-family:inherit}
     .bk-page{min-height:100vh;padding:32px 20px;background:#dedede}
     .bk-canvas{width:min(100%,1240px);margin:auto;overflow:hidden;background:#fffaf4;box-shadow:0 24px 90px rgba(15,23,42,.08)}
     .bk-hero{position:relative;overflow:hidden;min-height:760px;background:radial-gradient(circle at 16% 8%,rgba(255,190,157,.46),transparent 30%),radial-gradient(circle at 72% 4%,rgba(192,203,255,.5),transparent 28%),linear-gradient(180deg,#fff8f1 0%,#fffdf9 58%,#fff 100%);border-bottom:1px solid rgba(255,193,143,.28)}
@@ -20,9 +21,10 @@
     .bk-logo{display:flex;align-items:center;gap:9px;color:#0f172a;font-size:15px;letter-spacing:-.03em}
     .bk-logo span{display:grid;place-items:center;width:28px;height:28px;color:white;background:#ff8b45;border-radius:9px;box-shadow:0 10px 20px rgba(255,139,69,.25);font-size:13px;font-weight:900}
     .bk-nav nav{display:flex;gap:34px;color:#334155;font-size:12px;font-weight:650}
-    .bk-nav nav a:hover,.bk-nav>div:last-child a:first-child:hover{color:#ff7a2f}
+    .bk-nav nav a:hover,.bk-nav>div:last-child button:first-child:hover{color:#ff7a2f}
     .bk-nav>div:last-child{display:flex;align-items:center;gap:14px;color:#334155;font-size:12px;font-weight:750}
-    .bk-dark{padding:9px 16px;color:#fff;background:#0f172a;border-radius:999px}
+    .bk-auth-link{padding:0;border:0;background:transparent;color:inherit;cursor:pointer;font-size:12px;font-weight:750}
+    .bk-dark{padding:9px 16px;color:#fff;background:#0f172a;border:0;border-radius:999px;cursor:pointer;font-size:12px;font-weight:850}
     .bk-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:.88fr 1.12fr;align-items:center;gap:56px;padding:88px 0 110px}
     .bk-eyebrow,.bk-kicker{margin:0 0 14px;color:#64748b;font-size:10px;font-weight:850;letter-spacing:.24em;text-transform:uppercase}
     .bk-eyebrow span{margin:0 10px;color:#ff8b45}
@@ -30,8 +32,8 @@
     .bk-hero mark{display:inline-flex;padding:0 8px 2px;color:#ff8b45;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
     .bk-sub{max-width:430px;margin:25px 0 0;color:#5f6b7a;font-size:14px;line-height:1.9}
     .bk-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
-    .bk-orange,.bk-soft,.bk-cta a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;font-size:12px;font-weight:850}
-    .bk-orange,.bk-cta a{color:#fff;background:#ff8b45;box-shadow:0 14px 30px rgba(255,139,69,.25)}
+    .bk-orange,.bk-soft,.bk-cta a,.bk-cta button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;font-size:12px;font-weight:850}
+    .bk-orange,.bk-cta a,.bk-cta button{color:#fff;background:#ff8b45;box-shadow:0 14px 30px rgba(255,139,69,.25)}
     .bk-soft{color:#263244;background:rgba(255,255,255,.74);border:1px solid #e2e8f0}
     .bk-dashboard{width:100%;max-width:655px;margin:auto;padding:8px;border:1px solid rgba(255,255,255,.9);border-radius:24px;background:rgba(255,255,255,.75);box-shadow:0 38px 90px rgba(31,41,55,.18);transform:translateX(24px) rotate(-7deg);backdrop-filter:blur(12px)}
     .bk-window{overflow:hidden;border:1px solid rgba(226,232,240,.95);border-radius:18px;background:white}
@@ -47,6 +49,7 @@
     .bk-window aside p{margin:0 0 8px;padding:10px 12px;color:#64748b;border-radius:12px;font-size:11px;font-weight:650}
     .bk-window aside .active{color:#ff7a2f;background:#fff3ea}
     .bk-window main{padding:20px}
+    .bk-window-top b{width:112px;height:28px;margin-left:auto;border-radius:999px;background:#f1f5f9}
     .bk-dash-head,.bk-mini article:nth-child(2) p{display:flex;align-items:center;justify-content:space-between}
     .bk-dash-head small,.bk-metrics small{color:#94a3b8;font-size:10px;font-weight:850;text-transform:uppercase}
     .bk-dash-head h3{margin:3px 0 0;font-size:18px;letter-spacing:-.05em}
@@ -104,8 +107,8 @@
     .bk-plan-grid>article>strong{display:block;margin-top:19px;font-size:42px;letter-spacing:-.07em}
     .bk-plan-grid strong span{margin-left:3px;color:#64748b;font-size:14px;font-weight:650;letter-spacing:0}
     .bk-plan-grid>article>p{min-height:44px;color:#64748b;font-size:12px;line-height:1.7}
-    .bk-plan-grid article>a{display:flex;align-items:center;justify-content:center;min-height:42px;margin-top:22px;color:#0f172a;border:1px solid #e2e8f0;border-radius:999px;background:white;font-size:12px;font-weight:850}
-    .bk-plan-grid .featured>a{color:white;border-color:#ff8b45;background:#ff8b45;box-shadow:0 12px 28px rgba(255,139,69,.22)}
+    .bk-plan-grid article>a,.bk-plan-grid article>button{display:flex;align-items:center;justify-content:center;width:100%;min-height:42px;margin-top:22px;color:#0f172a;border:1px solid #e2e8f0;border-radius:999px;background:white;cursor:pointer;font-size:12px;font-weight:850}
+    .bk-plan-grid .featured>a,.bk-plan-grid .featured>button{color:white;border-color:#ff8b45;background:#ff8b45;box-shadow:0 12px 28px rgba(255,139,69,.22)}
     .bk-plan-grid ul{display:grid;gap:12px;margin:24px 0 0;padding:0;list-style:none}
     .bk-plan-grid li{display:flex;gap:10px;color:#64748b;font-size:12px;line-height:1.55}
     .bk-plan-grid li:before{content:"";width:15px;height:15px;flex:0 0 auto;border-radius:50%;background:#ff8b45;box-shadow:inset 0 0 0 4px white}
@@ -139,7 +142,7 @@
     .bk-cta{width:min(100% - 48px,1010px);margin:74px auto;padding:72px 34px;color:white;border-radius:16px;background:radial-gradient(circle at top left,rgba(255,139,69,.22),transparent 34%),linear-gradient(135deg,#161927,#2f3449);box-shadow:0 30px 70px rgba(15,23,42,.2);text-align:center}
     .bk-cta h2{max-width:620px;margin:auto;font-size:clamp(30px,4vw,42px);font-weight:540;letter-spacing:-.06em;line-height:1.16}
     .bk-cta p{max-width:540px;margin:18px auto 0;color:#d7dce8;font-size:14px;line-height:1.7}
-    .bk-cta a{margin-top:32px}
+    .bk-cta a,.bk-cta button{margin-top:32px;border:0;cursor:pointer}
     .bk-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:40px 0;border-top:1px solid #f1f5f9;color:#64748b;font-size:12px}
     .bk-footer>div{display:flex;align-items:center;gap:16px;font-weight:750}
     @media(max-width:980px){
@@ -154,7 +157,7 @@
       .bk-canvas{width:100%}
       .bk-nav,.bk-hero-grid,.bk-section,.bk-budget,.bk-pricing,.bk-faq,.bk-footer,.bk-cta{width:min(100% - 32px,1010px)}
       .bk-nav nav{display:none}
-      .bk-nav>div:last-child a:first-child{display:none}
+      .bk-nav>div:last-child button:first-child{display:none}
       .bk-hero{min-height:auto}
       .bk-hero h1{font-size:43px}
       .bk-window-body{grid-template-columns:1fr}
@@ -163,6 +166,351 @@
       .bk-tabs{border-radius:18px}
       .bk-table{overflow-x:auto}
       .bk-footer{flex-direction:column;align-items:flex-start}
+    }
+
+    /* Drawer Overlay styles */
+    .auth-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 7, 20, 0.45);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+      z-index: 9999;
+    }
+    .auth-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Right side drawer styles */
+    .auth-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 480px;
+      background: linear-gradient(135deg, rgba(10, 17, 38, 0.96), rgba(4, 7, 20, 0.99));
+      border-left: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: -20px 0 80px rgba(0, 0, 0, 0.6);
+      z-index: 10000;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      color: #ffffff;
+      overflow-y: auto;
+      font-family: 'Inter', sans-serif;
+    }
+    .auth-drawer.active {
+      transform: translateX(0);
+    }
+
+    /* Background blobs inside drawer */
+    .drawer-bg-blob {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.15;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .drawer-bg-blob-1 {
+      background: radial-gradient(circle, rgba(255, 139, 69, 0.8) 0%, transparent 70%);
+      top: -10%;
+      right: -10%;
+    }
+    .drawer-bg-blob-2 {
+      background: radial-gradient(circle, rgba(35, 191, 118, 0.8) 0%, transparent 70%);
+      bottom: -10%;
+      left: -10%;
+    }
+
+    .drawer-container {
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .drawer-close {
+      align-self: flex-end;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: rgba(255, 255, 255, 0.7);
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.2s ease, transform 0.2s;
+      line-height: 1;
+    }
+    .drawer-close:hover {
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      transform: rotate(90deg);
+    }
+
+    /* Header within drawer */
+    .drawer-header {
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+    .drawer-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 15px;
+      color: #ffffff;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .drawer-logo span {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      color: white;
+      background: #ff8b45;
+      border-radius: 9px;
+      box-shadow: 0 10px 20px rgba(255, 139, 69, .25);
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .drawer-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+    .drawer-subtitle {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.65);
+      margin: 0;
+    }
+
+    /* Tabs styling */
+    .drawer-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      padding: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+    .drawer-tab {
+      padding: 10px;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+    .drawer-tab.active {
+      background: rgba(255, 255, 255, 0.9);
+      color: #060b18;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Forms and Inputs */
+    .drawer-panel {
+      display: none;
+    }
+    .drawer-panel.active {
+      display: block;
+    }
+    .drawer-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .drawer-input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .drawer-label {
+      font-size: 11px;
+      font-weight: 750;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.08em;
+    }
+    .drawer-input {
+      width: 100%;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      color: #fff;
+      padding: 0 16px;
+      font-size: 13.5px;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .drawer-input:focus {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+    }
+    .drawer-input::placeholder {
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Checkbox & Options */
+    .drawer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    .drawer-checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .drawer-checkbox-label input {
+      accent-color: #23bf76;
+      width: 14px;
+      height: 14px;
+    }
+
+    /* Submit and Loader Buttons */
+    .drawer-submit {
+      width: 100%;
+      height: 48px;
+      border: 0;
+      border-radius: 10px;
+      background: linear-gradient(100deg, #ff8b45 0%, #ff6200 100%);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(255, 107, 0, 0.22);
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .drawer-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(255, 107, 0, 0.3);
+    }
+    .drawer-submit:active {
+      transform: translateY(1px);
+    }
+
+    /* Form switch helper */
+    .drawer-switch {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .drawer-link {
+      color: #ff8b45;
+      background: transparent;
+      border: 0;
+      font-weight: 750;
+      cursor: pointer;
+      padding: 0;
+      transition: color 0.2s;
+    }
+    .drawer-link:hover {
+      color: #ffaa76;
+      text-decoration: underline;
+    }
+
+    /* Error alert box style */
+    .drawer-error-alert {
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      background: rgba(239, 68, 68, 0.12);
+      color: #fca5a5;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+    .drawer-error-icon {
+      flex-shrink: 0;
+      color: #ef4444;
+      font-size: 14px;
+      margin-top: 2px;
+    }
+
+    /* Loader Animation Styles */
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #ffffff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .drawer-success {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+      text-align: center;
+    }
+    .drawer-success-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(35, 191, 118, 0.15);
+      color: #23bf76;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 24px rgba(35, 191, 118, 0.1);
+      animation: scaleUp 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    @keyframes scaleUp {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .drawer-footer {
+      margin-top: auto;
+      padding-top: 32px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 11px;
     }
   </style>
 </head>
@@ -179,7 +527,7 @@
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
           </nav>
-          <div><a href="https://client.buykori.app">Sign in</a><a class="bk-dark" href="https://client.buykori.app">Sign up</a></div>
+          <div><button class="bk-auth-link" type="button" data-auth-mode="login">Sign in</button><button class="bk-dark" type="button" data-auth-mode="signup">Sign up</button></div>
         </header>
 
         <div class="bk-hero-grid">
@@ -187,7 +535,7 @@
             <p class="bk-eyebrow">New update <span>|</span> Better server events for paid ads</p>
             <h1>Optimize Your <mark>Ad</mark> Tracking with Real-Time Data</h1>
             <p class="bk-sub">Monitor server-side event quality in real time, analyze campaign attribution, and send cleaner WooCommerce signals to Meta, TikTok and GA4.</p>
-            <div class="bk-actions"><a class="bk-orange" href="#pricing">Get Started -></a><a class="bk-soft" href="#features">How it Works</a></div>
+            <div class="bk-actions"><button class="bk-orange" type="button" data-auth-mode="signup">Get Started -></button><a class="bk-soft" href="#features">How it Works</a></div>
           </div>
           <div class="bk-dashboard" aria-label="Buykori dashboard preview">
             <div class="bk-window">
@@ -241,7 +589,7 @@
 
       <section id="pricing" class="bk-pricing">
         <p class="bk-kicker">Pricing</p><h2>Price is Just a Number, Focus on the Benefits</h2>
-        <div class="bk-plan-grid"><article><h3>Free Plan</h3><strong>$0<span>/month</span></strong><p>For testing one WooCommerce store.</p><a href="https://client.buykori.app">Start for free</a><ul><li>One store setup</li><li>Basic server events</li><li>Campaign URL builder</li></ul></article><article class="featured"><h3>Pro Plan</h3><strong>$19<span>/month</span></strong><p>For growing stores and marketers.</p><a href="https://client.buykori.app">Start 14 Days Trial</a><ul><li>Meta, TikTok and GA4</li><li>Signal Health Doctor</li><li>Deferred Purchase control</li><li>Priority support</li></ul></article><article><h3>Enterprise Plan</h3><strong>Custom</strong><p>For agencies and multi-store teams.</p><a href="https://client.buykori.app">Talk to sales</a><ul><li>Multi-client dashboard</li><li>Custom domains</li><li>Advanced event quality</li></ul></article></div>
+        <div class="bk-plan-grid"><article><h3>Free Plan</h3><strong>$0<span>/month</span></strong><p>For testing one WooCommerce store.</p><button type="button" data-auth-mode="signup">Start for free</button><ul><li>One store setup</li><li>Basic server events</li><li>Campaign URL builder</li></ul></article><article class="featured"><h3>Pro Plan</h3><strong>$19<span>/month</span></strong><p>For growing stores and marketers.</p><button type="button" data-auth-mode="signup">Start 14 Days Trial</button><ul><li>Meta, TikTok and GA4</li><li>Signal Health Doctor</li><li>Deferred Purchase control</li><li>Priority support</li></ul></article><article><h3>Enterprise Plan</h3><strong>Custom</strong><p>For agencies and multi-store teams.</p><button type="button" data-auth-mode="signup">Talk to sales</button><ul><li>Multi-client dashboard</li><li>Custom domains</li><li>Advanced event quality</li></ul></article></div>
       </section>
 
       <section class="bk-comparison">
@@ -259,9 +607,289 @@
         <div class="bk-faq-list"><details open><summary>What is Buykori AdSync?</summary><p>A server-side tracking platform that sends cleaner WooCommerce events to Meta CAPI, TikTok Events API and GA4.</p></details><details><summary>Does it support one-page landing pages?</summary><p>Yes. One-page mode can wait for real checkout intent before sending InitiateCheckout.</p></details><details><summary>Can I use only TikTok or only Meta?</summary><p>Yes. Platform toggles can control which destination receives events for each store.</p></details><details><summary>What data improves event match quality?</summary><p>Content IDs, value, currency, click IDs, user agent, IP and hashed customer fields help platforms match events better.</p></details></div>
       </section>
 
-      <section class="bk-cta"><h2>Ready to Optimize Your Ads and Maximize Your Results?</h2><p>Start using Buykori AdSync today and take control of your ad campaigns with real-time insights.</p><a href="https://client.buykori.app">Get Started for Free -></a></section>
+      <section class="bk-cta"><h2>Ready to Optimize Your Ads and Maximize Your Results?</h2><p>Start using Buykori AdSync today and take control of your ad campaigns with real-time insights.</p><button type="button" data-auth-mode="signup">Get Started for Free -></button></section>
       <footer class="bk-footer"><a class="bk-logo" href="/"><span>B</span><strong>Buykori AdSync</strong></a><div><span>Meta</span><span>TikTok</span><span>GA4</span></div><a href="#">Privacy Policy</a></footer>
     </div>
   </div>
+
+  <!-- Auth Overlay Background -->
+  <div id="auth-overlay" class="auth-overlay"></div>
+
+  <!-- Right-Side Slide-Over Auth Drawer -->
+  <div id="auth-drawer" class="auth-drawer">
+    <div class="drawer-bg-blob drawer-bg-blob-1"></div>
+    <div class="drawer-bg-blob drawer-bg-blob-2"></div>
+    
+    <div class="drawer-container">
+      <button id="drawer-close" class="drawer-close" aria-label="Close panel">&times;</button>
+      
+      <div class="drawer-header">
+        <div class="drawer-logo"><span>B</span><strong>Buykori AdSync</strong></div>
+        <h2 id="drawer-title" class="drawer-title">Welcome Back</h2>
+        <p id="drawer-subtitle" class="drawer-subtitle">Log in to manage your server-side event tracking.</p>
+      </div>
+
+      <div class="drawer-tabs" role="tablist">
+        <button id="tab-login" class="drawer-tab active" type="button" role="tab">Login</button>
+        <button id="tab-signup" class="drawer-tab" type="button" role="tab">Signup</button>
+      </div>
+
+      <!-- Live Notification/Error Alert Box -->
+      <div id="drawer-alert" class="drawer-error-alert" style="display: none;">
+        <span class="drawer-error-icon">&#9888;</span>
+        <span id="drawer-alert-text">An error occurred. Please try again.</span>
+      </div>
+
+      <!-- Login Form Panel -->
+      <form id="drawer-login-form" class="drawer-panel active" autocomplete="on">
+        <div class="drawer-field-group">
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="login-email">Email Address</label>
+            <input class="drawer-input" id="login-email" type="email" name="email" placeholder="name@domain.com" autocomplete="email" required>
+          </div>
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="login-password">Password</label>
+            <input class="drawer-input" id="login-password" type="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+          </div>
+        </div>
+        <div class="drawer-row">
+          <label class="drawer-checkbox-label">
+            <input type="checkbox" name="remember" checked> Remember me
+          </label>
+          <span style="color: rgba(35, 191, 118, 0.85); font-weight: 750;">Secure Portal</span>
+        </div>
+        <button class="drawer-submit" type="submit">
+          <span class="btn-text">Login</span>
+          <span class="btn-spinner spinner" style="display: none;"></span>
+        </button>
+        <p class="drawer-switch">Don't have an account? <button class="drawer-link" type="button" id="link-to-signup">Signup</button></p>
+      </form>
+
+      <!-- Signup Form Panel -->
+      <form id="drawer-signup-form" class="drawer-panel" autocomplete="on">
+        <div class="drawer-field-group">
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="signup-fullname">Full Name</label>
+            <input class="drawer-input" id="signup-fullname" type="text" name="full_name" placeholder="John Doe" autocomplete="name" required>
+          </div>
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="signup-bizname">Business Name</label>
+            <input class="drawer-input" id="signup-bizname" type="text" name="business_name" placeholder="Acme Corp" autocomplete="organization" required>
+          </div>
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="signup-email">Email Address</label>
+            <input class="drawer-input" id="signup-email" type="email" name="email" placeholder="name@domain.com" autocomplete="email" required>
+          </div>
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="signup-password">Create Password</label>
+            <input class="drawer-input" id="signup-password" type="password" name="password" placeholder="Min. 8 characters" autocomplete="new-password" minlength="8" required>
+          </div>
+          <div class="drawer-input-container">
+            <label class="drawer-label" for="signup-domain">Website Domain (Optional)</label>
+            <input class="drawer-input" id="signup-domain" type="text" name="domain" placeholder="example.com">
+          </div>
+        </div>
+        <button class="drawer-submit" type="submit">
+          <span class="btn-text">Create Account</span>
+          <span class="btn-spinner spinner" style="display: none;"></span>
+        </button>
+        <p class="drawer-switch">Already have an account? <button class="drawer-link" type="button" id="link-to-login">Login</button></p>
+      </form>
+
+      <!-- Success Screen (Animated) -->
+      <div id="drawer-success-screen" class="drawer-success" style="display: none;">
+        <div class="drawer-success-icon">&#10004;</div>
+        <h2 class="drawer-title" style="font-size: 22px;">Success!</h2>
+        <p class="drawer-subtitle" style="margin-top: 8px;">Synchronizing workspace credentials...</p>
+        <p class="drawer-subtitle" style="font-size: 12px; color: rgba(255, 255, 255, 0.4); margin-top: 6px;">Redirecting you to client dashboard...</p>
+      </div>
+
+      <div class="drawer-footer">Created by Buykori AdSync</div>
+    </div>
+  </div>
+
+  <script>
+    // Elements
+    const authOverlay = document.getElementById('auth-overlay');
+    const authDrawer = document.getElementById('auth-drawer');
+    const drawerClose = document.getElementById('drawer-close');
+    const drawerTitle = document.getElementById('drawer-title');
+    const drawerSubtitle = document.getElementById('drawer-subtitle');
+    const tabLogin = document.getElementById('tab-login');
+    const tabSignup = document.getElementById('tab-signup');
+    const loginForm = document.getElementById('drawer-login-form');
+    const signupForm = document.getElementById('drawer-signup-form');
+    const successScreen = document.getElementById('drawer-success-screen');
+    const drawerAlert = document.getElementById('drawer-alert');
+    const drawerAlertText = document.getElementById('drawer-alert-text');
+    const linkToSignup = document.getElementById('link-to-signup');
+    const linkToLogin = document.getElementById('link-to-login');
+
+    // Tab Activation Helper
+    function activateTab(tabName) {
+      if (tabName === 'login') {
+        tabLogin.classList.add('active');
+        tabSignup.classList.remove('active');
+        loginForm.classList.add('active');
+        signupForm.classList.remove('active');
+        successScreen.style.display = 'none';
+        drawerTitle.textContent = 'Welcome Back';
+        drawerSubtitle.textContent = 'Log in to manage your server-side event tracking.';
+      } else {
+        tabLogin.classList.remove('active');
+        tabSignup.classList.add('active');
+        loginForm.classList.remove('active');
+        signupForm.classList.add('active');
+        successScreen.style.display = 'none';
+        drawerTitle.textContent = 'Create Store Account';
+        drawerSubtitle.textContent = 'Start tracking WooCommerce server events in minutes.';
+      }
+      hideAlert();
+    }
+
+    // Toggle Drawer Helper
+    function openDrawer(activeTab = 'login') {
+      // Clear forms
+      loginForm.reset();
+      signupForm.reset();
+      
+      // Clear screens display
+      loginForm.style.display = 'block';
+      signupForm.style.display = 'block';
+      document.querySelector('.drawer-tabs').style.display = 'grid';
+      drawerTitle.style.display = 'block';
+      drawerSubtitle.style.display = 'block';
+      successScreen.style.display = 'none';
+      
+      activateTab(activeTab);
+      authOverlay.classList.add('active');
+      authDrawer.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Disable page scrolling
+    }
+
+    function closeDrawer() {
+      authOverlay.classList.remove('active');
+      authDrawer.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Re-enable page scrolling
+      // Clear forms
+      loginForm.reset();
+      signupForm.reset();
+      hideAlert();
+    }
+
+    // Alert Helpers
+    function showAlert(message) {
+      drawerAlertText.textContent = message;
+      drawerAlert.style.display = 'flex';
+    }
+
+    function hideAlert() {
+      drawerAlert.style.display = 'none';
+    }
+
+    // Event Listeners for Open/Close
+    tabLogin.addEventListener('click', () => activateTab('login'));
+    tabSignup.addEventListener('click', () => activateTab('signup'));
+    linkToSignup.addEventListener('click', (e) => { e.preventDefault(); activateTab('signup'); });
+    linkToLogin.addEventListener('click', (e) => { e.preventDefault(); activateTab('login'); });
+    drawerClose.addEventListener('click', closeDrawer);
+    authOverlay.addEventListener('click', closeDrawer);
+
+    // Open the marketing-site auth drawer instead of sending visitors away first.
+    document.addEventListener('click', function(e) {
+      const authTrigger = e.target.closest('[data-auth-mode]');
+      if (authTrigger) {
+        e.preventDefault();
+        openDrawer(authTrigger.getAttribute('data-auth-mode') === 'login' ? 'login' : 'signup');
+        return;
+      }
+
+      const link = e.target.closest('a');
+      if (link && link.getAttribute('href') && link.getAttribute('href').includes('client.buykori.app')) {
+        e.preventDefault();
+        openDrawer('signup');
+      }
+    });
+
+    // Form submission helper
+    async function submitAuthForm(form, endpoint, payloadBuilder) {
+      const submitBtn = form.querySelector('.drawer-submit');
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnSpinner = submitBtn.querySelector('.btn-spinner');
+
+      // Disable interactions and show spinner
+      submitBtn.disabled = true;
+      btnText.style.opacity = '0.5';
+      btnSpinner.style.display = 'inline-block';
+      hideAlert();
+
+      const payload = payloadBuilder();
+
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.detail || 'An unexpected authentication error occurred.');
+        }
+
+        // Authentication Success Workflow
+        loginForm.style.display = 'none';
+        signupForm.style.display = 'none';
+        document.querySelector('.drawer-tabs').style.display = 'none';
+        drawerTitle.style.display = 'none';
+        drawerSubtitle.style.display = 'none';
+        successScreen.style.display = 'flex';
+
+        // Wait for visual confirmation and redirect to client dashboard
+        setTimeout(() => {
+          window.location.assign('https://client.buykori.app');
+        }, 1200);
+
+      } catch (error) {
+        showAlert(error.message);
+        submitBtn.disabled = false;
+        btnText.style.opacity = '1';
+        btnSpinner.style.display = 'none';
+      }
+    }
+
+    // Login Form Handler
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitAuthForm(
+        loginForm,
+        '/api/v1/auth/client/login',
+        () => ({
+          email: loginForm.email.value.trim(),
+          password: loginForm.password.value
+        })
+      );
+    });
+
+    // Signup Form Handler
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitAuthForm(
+        signupForm,
+        '/api/v1/auth/client/signup',
+        () => ({
+          full_name: signupForm.full_name.value.trim(),
+          business_name: signupForm.business_name.value.trim(),
+          email: signupForm.email.value.trim(),
+          password: signupForm.password.value,
+          domain: signupForm.domain.value.trim() || null
+        })
+      );
+    });
+  </script>
 </body>
 </html>
