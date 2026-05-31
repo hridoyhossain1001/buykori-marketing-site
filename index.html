@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buykori AdSync - Server-Side Ads Tracking</title>
+  <title>Buykori AdSync - Tracking and Order Operations</title>
   <meta name="description"
-    content="Buykori AdSync sends cleaner WooCommerce server-side events to Meta CAPI, TikTok Events API and GA4." />
+    content="Buykori AdSync combines WooCommerce server-side tracking, COD purchase control and courier order management in one dashboard." />
   <script>
     (function () {
       const t = localStorage.getItem('bk_theme') || 'dark';
@@ -36,7 +36,7 @@
     <nav class="bk-links" id="navLinks" aria-label="Main navigation">
       <a href="#features" onclick="closeMobileMenu()">Home</a>
       <a href="#product" onclick="closeMobileMenu()">Product</a>
-      <a href="#solution" onclick="closeMobileMenu()">Solution</a>
+      <a href="#management" onclick="closeMobileMenu()">Management</a>
       <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
       <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
       <div class="bk-mobile-actions">
@@ -65,13 +65,17 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-hero" id="features">
     <div>
-      <div class="bk-eyebrow">New update &nbsp;|&nbsp; Better server events for paid ads</div>
-      <h1>Optimize Your <mark>Ad</mark> Tracking with Real-Time Data</h1>
-      <p class="bk-hero-sub">Monitor server-side event quality in real time, analyze campaign attribution, and send
-        cleaner WooCommerce signals to Meta, TikTok and GA4.</p>
+      <div class="bk-eyebrow">One dashboard &nbsp;|&nbsp; Tracking, COD control and courier sync</div>
+      <h1>Track Ads. <mark>Manage Orders.</mark> Grow Smarter.</h1>
+      <p class="bk-hero-sub">Send cleaner WooCommerce signals to Meta, TikTok and GA4, then manage COD orders and courier fulfillment from the same connected dashboard.</p>
+      <div class="bk-hero-capabilities" aria-label="Core product capabilities">
+        <span>Server-side tracking</span>
+        <span>COD purchase control</span>
+        <span>Courier order management</span>
+      </div>
       <div class="bk-actions">
         <button class="bk-btn-primary" type="button" data-auth-mode="signup">Get Started →</button>
-        <a class="bk-btn-soft" href="#product">How it Works</a>
+        <a class="bk-btn-soft" href="#management">Explore Platform</a>
       </div>
     </div>
     <div class="bk-dashboard-wrap">
@@ -242,14 +246,51 @@
     </div>
   </div>
 
+  <section class="bk-management-band" id="management">
+    <div class="bk-management-inner">
+      <div class="bk-management-copy">
+        <div class="bk-kicker">Beyond tracking</div>
+        <h2 class="bk-section-title">Your WooCommerce operations, connected to your ad data.</h2>
+        <p class="bk-section-sub">Buykori AdSync is not only a tracking server. It helps your team manage COD orders, courier bookings and delivery-driven purchase signals from one workflow.</p>
+        <div class="bk-management-tags">
+          <span>Order dashboard</span>
+          <span>Steadfast and Pathao booking</span>
+          <span>Delivery status sync</span>
+          <span>Deferred purchase control</span>
+        </div>
+        <a class="bk-inline-link" href="#operations">See order management in action <span>&rarr;</span></a>
+      </div>
+      <div class="bk-ops-preview" aria-label="Order operations dashboard preview">
+        <div class="bk-ops-top">
+          <div>
+            <small>ORDER OPERATIONS</small>
+            <h3>COD Fulfillment Center</h3>
+          </div>
+          <span class="bk-status-badge active"><span class="pulse-dot"></span> Live sync</span>
+        </div>
+        <div class="bk-ops-metrics">
+          <div><small>New orders</small><strong>148</strong><span>Today</span></div>
+          <div><small>Courier booked</small><strong>112</strong><span>75.7%</span></div>
+          <div><small>COD confirmed</small><strong>86</strong><span>Synced</span></div>
+        </div>
+        <div class="bk-ops-table">
+          <div class="bk-ops-row bk-ops-heading"><span>Order</span><span>Courier</span><span>Status</span></div>
+          <div class="bk-ops-row"><strong>#1482</strong><span>Steadfast</span><em class="booked">Booked</em></div>
+          <div class="bk-ops-row"><strong>#1481</strong><span>Pathao</span><em class="transit">In transit</em></div>
+          <div class="bk-ops-row"><strong>#1480</strong><span>Steadfast</span><em class="delivered">Delivered</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- SECTION 4 — HOW IT WORKS (3-Step WooCommerce Setup)       -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-section-wrap" id="solution">
     <div class="bk-center" style="margin-bottom: 44px;">
       <div class="bk-kicker">How it works</div>
-      <h2 class="bk-section-title" style="margin: auto;">Get started in 3 simple steps</h2>
-      <p class="bk-section-sub" style="margin: 14px auto 0;">No coding. No complex API setup. Download a ready-made plugin, upload, and start tracking instantly.</p>
+      <h2 class="bk-section-title" style="margin: auto;">Get connected in 3 simple steps</h2>
+      <p class="bk-section-sub" style="margin: 14px auto 0;">No coding. Download a ready-made plugin, activate it, and connect tracking plus order operations in minutes.</p>
     </div>
     <div class="bk-steps-grid">
       <div class="bk-card bk-step-card">
@@ -264,8 +305,8 @@
       </div>
       <div class="bk-card bk-step-card">
         <div class="bk-step-num">3</div>
-        <h3>Real-Time Signal Sync</h3>
-        <p>The plugin hooks into WooCommerce purchase, checkout, cart, and search events, routing cleaner events instantly to your server.</p>
+        <h3>Track and Manage</h3>
+        <p>Cleaner events flow to your server while your team manages COD confirmation, courier booking and delivery updates from the portal.</p>
       </div>
     </div>
   </div>
@@ -275,7 +316,7 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-section-wrap bk-center">
     <div class="bk-kicker">Key features</div>
-    <h2 class="bk-section-title" style="margin: 0 auto 12px; max-width: 600px;">Everything you need for cleaner ad data</h2>
+    <h2 class="bk-section-title" style="margin: 0 auto 12px; max-width: 680px;">Everything you need to track ads and run order operations</h2>
     <div class="bk-feat-grid">
       <!-- SVG Gradient Defs (shared) -->
       <svg width="0" height="0" style="position:absolute;">
@@ -320,8 +361,8 @@
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
           </svg>
         </div>
-        <h3>Agency Multi-Tenant</h3>
-        <p>Switch between multiple stores, client portals, and brand configurations from a single centralized admin panel.</p>
+        <h3>Order Operations Dashboard</h3>
+        <p>Review COD orders, book couriers and follow fulfillment statuses from a single connected workspace.</p>
       </div>
       <div class="bk-card bk-feat-card">
         <div class="bk-feat-icon">
@@ -353,11 +394,6 @@
 
     <!-- 6A — E-Commerce Optimization (Lottie) -->
     <div class="bk-two-col" style="align-items: center; margin-bottom: 40px;">
-      <div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 480px; height: auto;">
-        <lottie-player src="website-building-of-shopping-sale-transparent.json" background="transparent" speed="1"
-          style="width: 100%; height: 100%;" loop autoplay>
-        </lottie-player>
-      </div>
       <div>
         <div class="bk-kicker">E-Commerce Setup & Optimization</div>
         <h2 class="bk-section-title">Automate Your Store's Tracking Seamlessly</h2>
@@ -381,6 +417,11 @@
             </div>
           </div>
         </div>
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center; width: 100%; max-width: 480px; height: auto;">
+        <lottie-player src="website-building-of-shopping-sale-transparent.json" background="transparent" speed="1"
+          style="width: 100%; height: 100%;" loop autoplay>
+        </lottie-player>
       </div>
     </div>
 
@@ -498,7 +539,7 @@
     </div>
 
     <!-- 6C — Courier & Fulfillment -->
-    <div class="bk-two-col" style="align-items: center;">
+    <div class="bk-two-col" id="operations" style="align-items: center;">
       <div>
         <div class="bk-kicker">Courier & Fulfillment Sync</div>
         <h2 class="bk-section-title">Automate Shipping with Steadfast & Pathao</h2>
@@ -658,7 +699,7 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-section-wrap bk-center" id="pricing">
     <div class="bk-kicker">Pricing</div>
-    <h2 class="bk-section-title" style="margin:auto;">Simple, transparent pricing</h2>
+    <h2 class="bk-section-title" style="margin:auto;">Simple pricing for tracking and operations</h2>
     <div class="bk-plan-grid">
       <div class="bk-card bk-plan">
         <h3>Free Plan</h3>
@@ -680,7 +721,7 @@
           <li>Meta, TikTok and GA4</li>
           <li>Signal Health Doctor</li>
           <li>Deferred Purchase control</li>
-          <li>Courier integration</li>
+          <li>Courier order management</li>
           <li>Priority support</li>
         </ul>
       </div>
@@ -793,6 +834,26 @@
                   </span>
                 </td>
               </tr>
+              <tr>
+                <td>
+                  <span class="area-title">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="area-icon"><path d="M3 3h18v13H3z"/><path d="M8 21h8"/><path d="M12 16v5"/></svg>
+                    Order operations
+                  </span>
+                </td>
+                <td class="highlight-col">
+                  <span class="icon-text">
+                    <span class="icon-check">✔</span>
+                    COD review, courier booking and delivery status sync in one portal.
+                  </span>
+                </td>
+                <td>
+                  <span class="icon-text">
+                    <span class="icon-cross">✕</span>
+                    Separate courier panels and manual status checks.
+                  </span>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -835,12 +896,16 @@
       <div>
         <div class="bk-kicker">FAQ</div>
         <h2 class="bk-section-title">Got questions? We've got answers.</h2>
-        <p class="bk-section-sub">Simple answers for campaign tracking, one-page landing pages and event quality.</p>
+        <p class="bk-section-sub">Simple answers for server-side tracking, COD order management and courier fulfillment.</p>
       </div>
       <div class="bk-faq-list">
         <details open>
           <summary>What is Buykori AdSync?</summary>
-          <p>A server-side tracking platform that sends cleaner WooCommerce events to Meta CAPI, TikTok Events API and GA4.</p>
+          <p>A connected WooCommerce platform for server-side ad tracking, COD purchase control and courier order management.</p>
+        </details>
+        <details>
+          <summary>Can I manage orders from the dashboard?</summary>
+          <p>Yes. You can review COD orders, submit consignments to supported couriers and follow delivery statuses from the portal.</p>
         </details>
         <details>
           <summary>Does it support one-page landing pages?</summary>
@@ -863,8 +928,8 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-cta-section">
     <div class="bk-cta-card">
-      <h2>Ready to Optimize Your Ads and Maximize Your Results?</h2>
-      <p>Start using Buykori AdSync today and take control of your ad campaigns with real-time insights.</p>
+      <h2>Ready to connect your ads, orders and delivery workflow?</h2>
+      <p>Start using Buykori AdSync to track cleaner signals and manage WooCommerce order operations from one dashboard.</p>
       <button class="bk-btn-primary" type="button" data-auth-mode="signup" style="margin-top:30px;">Get Started for Free →</button>
     </div>
   </div>
