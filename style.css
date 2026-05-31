@@ -3261,11 +3261,24 @@
 
     @media (max-width: 520px) {
       .bk-perf-stats-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px 12px;
+        padding: 0 18px;
       }
       .bk-perf-stat-item {
-        justify-content: center;
+        gap: 10px;
+        justify-content: flex-start;
+      }
+      .bk-stat-circle {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+      .bk-stat-text h3 {
+        font-size: 18px;
+      }
+      .bk-stat-text p {
+        font-size: 9px;
       }
     }
 
