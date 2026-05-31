@@ -3502,6 +3502,32 @@
       background: rgba(var(--primary-rgb), 0.055);
     }
 
+    .bk-audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+      text-align: left;
+    }
+
+    .bk-audience-card {
+      padding: 22px;
+    }
+
+    .bk-audience-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      font-family: Outfit, sans-serif;
+      font-size: 15px;
+    }
+
+    .bk-audience-card span {
+      color: var(--text-muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
     @media (max-width: 1080px) {
       .bk-hero {
         grid-template-columns: 1fr;
@@ -3509,6 +3535,10 @@
 
       .bk-management-inner {
         grid-template-columns: 1fr;
+      }
+
+      .bk-audience-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -3530,6 +3560,10 @@
       }
 
       .bk-ops-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .bk-audience-grid {
         grid-template-columns: 1fr;
       }
     }

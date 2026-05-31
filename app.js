@@ -114,11 +114,17 @@
 
     panelSignup.addEventListener('submit', e => {
       e.preventDefault();
+      const password = document.getElementById('signup-password').value;
+      const confirmPassword = document.getElementById('signup-confirm-password').value;
+      if (password !== confirmPassword) {
+        showAlert("Passwords do not match.");
+        return;
+      }
       submitForm(panelSignup, '/api/v1/auth/client/signup', () => ({
         full_name: document.getElementById('signup-fullname').value.trim(),
         business_name: document.getElementById('signup-bizname').value.trim(),
         email: document.getElementById('signup-email').value.trim(),
-        password: document.getElementById('signup-password').value,
+        password: password,
         domain: document.getElementById('signup-domain').value.trim() || null
       }));
     });

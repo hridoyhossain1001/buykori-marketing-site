@@ -51,7 +51,7 @@
         <span class="theme-icon-dark">🌙 <span class="theme-btn-text">DARK</span></span>
       </button>
       <button class="bk-auth-link" type="button" data-auth-mode="login">Sign in</button>
-      <button class="bk-btn-primary" type="button" data-auth-mode="signup">Get Started →</button>
+      <button class="bk-btn-primary" type="button" data-auth-mode="signup">Start Free →</button>
       <button class="bk-menu-toggle" id="menuToggle" aria-label="Toggle menu" onclick="toggleMobileMenu()">
         <span></span>
         <span></span>
@@ -74,7 +74,7 @@
         <span>Courier order management</span>
       </div>
       <div class="bk-actions">
-        <button class="bk-btn-primary" type="button" data-auth-mode="signup">Get Started →</button>
+        <button class="bk-btn-primary" type="button" data-auth-mode="signup">Start Free →</button>
         <a class="bk-btn-soft" href="#management">Explore Platform</a>
       </div>
     </div>
@@ -88,8 +88,9 @@
               <p class="active">Dashboard</p>
               <p>Events</p>
               <p>Quality</p>
-              <p>Reports</p>
-              <p>Settings</p>
+              <p>Orders</p>
+              <p>Couriers</p>
+              <p>COD Control</p>
             </div>
             <div class="bk-aside-platforms">
               <small class="bk-aside-section-label">Platforms</small>
@@ -182,8 +183,8 @@
           </svg>
         </div>
         <div class="bk-stat-text">
-          <h3>99.9%</h3>
-          <p>Delivery Rate</p>
+          <h3>Track</h3>
+          <p>Server Events</p>
         </div>
       </div>
 
@@ -195,8 +196,8 @@
           </svg>
         </div>
         <div class="bk-stat-text">
-          <h3>&lt;60ms</h3>
-          <p>Avg Latency</p>
+          <h3>Review</h3>
+          <p>COD Orders</p>
         </div>
       </div>
 
@@ -208,8 +209,8 @@
           </svg>
         </div>
         <div class="bk-stat-text">
-          <h3>300+</h3>
-          <p>Edge Locations</p>
+          <h3>Book</h3>
+          <p>Courier Delivery</p>
         </div>
       </div>
 
@@ -221,8 +222,8 @@
           </svg>
         </div>
         <div class="bk-stat-text">
-          <h3>24/7</h3>
-          <p>Monitoring</p>
+          <h3>Sync</h3>
+          <p>Purchase Status</p>
         </div>
       </div>
     </div>
@@ -233,7 +234,7 @@
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-section-wrap bk-center" id="product" style="padding: 20px 0 40px;">
     <p class="bk-section-sub" style="margin:0 auto 20px; max-width:640px; font-family:'Space Grotesk',sans-serif; font-size:clamp(18px,2.5vw,26px); font-weight:600; letter-spacing:-0.04em; color:var(--text-main);">
-      Trusted by WooCommerce stores sending cleaner server events to
+      Connect your WooCommerce workflow with the tools you already use
     </p>
     <div class="bk-logo-cloud">
       <span class="bk-logo-chip">Meta CAPI</span>
@@ -471,7 +472,7 @@
             <div class="bk-stat-bar-group">
               <div class="bk-stat-bar-label">
                 <span>Standard Pixel (3rd Party)</span>
-                <span style="color: var(--danger);">60% Blocked</span>
+                <span style="color: var(--danger);">More vulnerable</span>
               </div>
               <div class="bk-stat-bar-bg">
                 <div class="bk-stat-bar-fill blocked" style="width: 40%;"></div>
@@ -480,10 +481,10 @@
             <div class="bk-stat-bar-group" style="margin-top: 14px;">
               <div class="bk-stat-bar-label">
                 <span>AdSync Custom Domain</span>
-                <span style="color: var(--success);">100% Delivered</span>
+                <span style="color: var(--success);">More resilient</span>
               </div>
               <div class="bk-stat-bar-bg">
-                <div class="bk-stat-bar-fill active" style="width: 100%;"></div>
+                <div class="bk-stat-bar-fill active" style="width: 86%;"></div>
               </div>
             </div>
           </div>
@@ -517,7 +518,7 @@
         <div class="bk-kicker">AdBlocker Bypass</div>
         <h2 class="bk-section-title">First-Party Custom Domain Syncing</h2>
         <p class="bk-section-sub">
-          iOS 14+, Safari ITP, and modern AdBlockers routinely block third-party tracking scripts. AdSync routes all events through your own first-party subdomain (e.g. <code>track.yourstore.com</code>) to secure 100% data fidelity.
+          iOS updates, Safari ITP, and modern ad blockers can reduce third-party tracking reliability. AdSync can route events through your own first-party subdomain (e.g. <code>track.yourstore.com</code>) to improve signal resilience.
         </p>
         <div class="bk-note-list" style="margin-top:24px;">
           <div class="bk-card bk-note-card">
@@ -530,8 +531,8 @@
           <div class="bk-card bk-note-card">
             <div class="bk-note-dot">🛡️</div>
             <div>
-              <h4>Bypass Brave & AdBlock Plus</h4>
-              <p>Keeps tracking fully operational even when visitors use strict privacy-oriented browsers or extensions.</p>
+              <h4>Reduce Signal Loss</h4>
+              <p>Use a first-party routing approach to improve reliability across privacy-oriented browsers and extensions.</p>
             </div>
           </div>
         </div>
@@ -683,11 +684,11 @@
             </div>
             <div class="bk-emq-stat-badge">
               <small>AdSync Target Score</small>
-              <strong style="color: var(--success)">9.6 / 10 (Excellent)</strong>
+              <strong style="color: var(--success)">Improved matching</strong>
             </div>
           </div>
           <p class="bk-emq-advice" id="emq-advice-text">
-            Good quality! AdSync can boost this score to <strong>9.6/10</strong> by injecting missing IP/UA matching parameters automatically.
+            AdSync can help improve match quality by adding available server-side parameters such as IP and user agent.
           </p>
         </div>
       </div>
@@ -704,12 +705,13 @@
       <div class="bk-card bk-plan">
         <h3>Free Plan</h3>
         <div class="bk-plan-price">$0<span>/month</span></div>
-        <div class="bk-plan-desc">For testing one WooCommerce store.</div>
+        <div class="bk-plan-desc">For testing tracking on one WooCommerce store.</div>
         <button class="bk-plan-btn" type="button" data-auth-mode="signup">Start for free</button>
         <ul>
           <li>One store setup</li>
           <li>Basic server events</li>
           <li>Campaign URL builder</li>
+          <li>Order management preview</li>
         </ul>
       </div>
       <div class="bk-card bk-plan featured">
@@ -721,7 +723,8 @@
           <li>Meta, TikTok and GA4</li>
           <li>Signal Health Doctor</li>
           <li>Deferred Purchase control</li>
-          <li>Courier order management</li>
+          <li>Steadfast & Pathao booking</li>
+          <li>COD delivery status sync</li>
           <li>Priority support</li>
         </ul>
       </div>
@@ -862,32 +865,17 @@
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECTION 9 — TESTIMONIALS + FAQ                            -->
+  <!-- SECTION 9 — AUDIENCE + FAQ                                -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <div class="bk-section-wrap bk-center">
-    <div class="bk-kicker">Customer stories</div>
-    <h2 class="bk-section-title" style="margin:auto;">Designed for store owners and media buyers.</h2>
-    <p class="bk-section-sub" style="margin:14px auto 0;">Use cleaner server-side event data to reduce confusion before
-      scaling ad budget.</p>
-    <div class="bk-testi-grid">
-      <div class="bk-card bk-testi">
-        <div class="bk-stars">★★★★★</div>
-        <p>"The dashboard makes tracking issues easier to explain before campaigns waste budget."</p>
-        <strong>Agency Operator</strong>
-        <small>Meta and TikTok ads</small>
-      </div>
-      <div class="bk-card bk-testi">
-        <div class="bk-stars">★★★★★</div>
-        <p>"Deferred purchase tracking is exactly what COD stores need before sending final purchase data."</p>
-        <strong>WooCommerce Owner</strong>
-        <small>Bangladesh ecommerce</small>
-      </div>
-      <div class="bk-card bk-testi">
-        <div class="bk-stars">★★★★★</div>
-        <p>"Campaign URL Builder plus server events makes source reporting much cleaner across channels."</p>
-        <strong>Performance Marketer</strong>
-        <small>Multi-platform campaigns</small>
-      </div>
+    <div class="bk-kicker">Who it is for</div>
+    <h2 class="bk-section-title" style="margin:auto;">Built for teams that need cleaner signals and tighter fulfillment.</h2>
+    <p class="bk-section-sub" style="margin:14px auto 0;">Use one workflow when ad reporting and order operations need to stay connected.</p>
+    <div class="bk-audience-grid">
+      <div class="bk-card bk-audience-card"><strong>WooCommerce Stores</strong><span>Connect storefront events and everyday order handling.</span></div>
+      <div class="bk-card bk-audience-card"><strong>COD Businesses</strong><span>Protect reporting from unverified or returned purchases.</span></div>
+      <div class="bk-card bk-audience-card"><strong>Agencies</strong><span>Monitor multiple client stores with a consistent setup.</span></div>
+      <div class="bk-card bk-audience-card"><strong>Performance Marketers</strong><span>Scale campaigns using cleaner conversion signals.</span></div>
     </div>
   </div>
 
@@ -906,6 +894,14 @@
         <details>
           <summary>Can I manage orders from the dashboard?</summary>
           <p>Yes. You can review COD orders, submit consignments to supported couriers and follow delivery statuses from the portal.</p>
+        </details>
+        <details>
+          <summary>Which couriers are supported?</summary>
+          <p>The current order workflow supports Steadfast and Pathao booking with delivery status updates.</p>
+        </details>
+        <details>
+          <summary>Does courier status affect purchase tracking?</summary>
+          <p>Yes. Deferred purchase control helps align final purchase signals with the order status used by your COD workflow.</p>
         </details>
         <details>
           <summary>Does it support one-page landing pages?</summary>
@@ -930,7 +926,7 @@
     <div class="bk-cta-card">
       <h2>Ready to connect your ads, orders and delivery workflow?</h2>
       <p>Start using Buykori AdSync to track cleaner signals and manage WooCommerce order operations from one dashboard.</p>
-      <button class="bk-btn-primary" type="button" data-auth-mode="signup" style="margin-top:30px;">Get Started for Free →</button>
+      <button class="bk-btn-primary" type="button" data-auth-mode="signup" style="margin-top:30px;">Start Free →</button>
     </div>
   </div>
 
@@ -953,7 +949,7 @@
       <div class="auth-modal-body">
         <div class="auth-modal-logo"><span>B</span>Buykori AdSync</div>
         <h2 id="modal-title" class="auth-title">Welcome Back</h2>
-        <p id="modal-sub" class="auth-sub">Log in to manage your server-side event tracking.</p>
+        <p id="modal-sub" class="auth-sub">Log in to manage tracking and order operations.</p>
 
         <div class="auth-tabs" role="tablist">
           <button id="tab-login" class="auth-tab active" type="button">Login</button>
@@ -1010,6 +1006,10 @@
           <div class="auth-field">
             <label class="auth-label" for="signup-password">Create Password</label>
             <input class="auth-input" id="signup-password" type="password" placeholder="Min. 8 characters" autocomplete="new-password" minlength="8" required>
+          </div>
+          <div class="auth-field">
+            <label class="auth-label" for="signup-confirm-password">Confirm Password</label>
+            <input class="auth-input" id="signup-confirm-password" type="password" placeholder="Confirm your password" autocomplete="new-password" minlength="8" required>
           </div>
           <div class="auth-field">
             <label class="auth-label" for="signup-domain">Website Domain (Optional)</label>
