@@ -37,6 +37,7 @@
     const linkToSignup = document.getElementById('link-to-signup');
     const linkToLogin = document.getElementById('link-to-login');
     const modalClose = document.getElementById('modal-close');
+    let selectedSignupPlan = 'growth_trial';
 
     function showAlert(msg) { authAlertText.textContent = msg; authAlert.style.display = 'flex'; }
     function hideAlert() { authAlert.style.display = 'none'; }
@@ -53,8 +54,9 @@
       hideAlert();
     }
 
-    function openModal(tab = 'login') {
+    function openModal(tab = 'login', signupPlan = 'growth_trial') {
       panelLogin.reset(); panelSignup.reset();
+      selectedSignupPlan = signupPlan;
       authSuccess.style.display = 'none';
       activateTab(tab);
       overlay.classList.add('active');
@@ -80,7 +82,13 @@
 
     document.addEventListener('click', function (e) {
       const trigger = e.target.closest('[data-auth-mode]');
-      if (trigger) { e.preventDefault(); openModal(trigger.dataset.authMode === 'login' ? 'login' : 'signup'); }
+      if (trigger) {
+        e.preventDefault();
+        openModal(
+          trigger.dataset.authMode === 'login' ? 'login' : 'signup',
+          trigger.dataset.signupPlan || 'growth_trial'
+        );
+      }
     });
 
     async function submitForm(form, endpoint, payloadFn) {
@@ -125,7 +133,8 @@
         business_name: document.getElementById('signup-bizname').value.trim(),
         email: document.getElementById('signup-email').value.trim(),
         password: password,
-        domain: document.getElementById('signup-domain').value.trim() || null
+        domain: document.getElementById('signup-domain').value.trim() || null,
+        selected_plan: selectedSignupPlan
       }));
     });
 
