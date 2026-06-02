@@ -132,6 +132,7 @@
         full_name: document.getElementById('signup-fullname').value.trim(),
         business_name: document.getElementById('signup-bizname').value.trim(),
         email: document.getElementById('signup-email').value.trim(),
+        phone_number: document.getElementById('signup-phone').value.trim(),
         password: password,
         domain: document.getElementById('signup-domain').value.trim() || null,
         selected_plan: selectedSignupPlan
