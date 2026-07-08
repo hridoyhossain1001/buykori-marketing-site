@@ -91,6 +91,15 @@
       }
     });
 
+    function readableAuthMessage(value, fallback = 'Authentication error.') {
+      if (!value) return fallback;
+      if (typeof value === 'string') return value;
+      if (typeof value === 'object') {
+        return value.detail || value.message || value.error || fallback;
+      }
+      return String(value);
+    }
+
     async function submitForm(form, endpoint, payloadFn) {
       const btn = form.querySelector('.auth-submit');
       const text = btn.querySelector('.btn-text');
@@ -98,9 +107,16 @@
       btn.disabled = true; text.style.opacity = '0.5'; spinner.style.display = 'inline-block';
       hideAlert();
       try {
-        const r = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payloadFn()) });
+        const payload = payloadFn();
+        const r = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
         const d = await r.json();
-        if (!r.ok) throw new Error(d.detail || 'Authentication error.');
+        if (!r.ok) throw new Error(readableAuthMessage(d));
+        if (d.status === 'verify_email_required') {
+          const email = d.email || payload.email || '';
+          const verifyUrl = d.verifyUrl || `/client/verify-email?email=${encodeURIComponent(email)}`;
+          window.location.assign(`https://api.buykori.app${verifyUrl}`);
+          return;
+        }
         panelLogin.style.display = 'none'; panelSignup.style.display = 'none';
         document.querySelector('.auth-tabs').style.display = 'none';
         modalTitle.style.display = 'none'; modalSub.style.display = 'none';
