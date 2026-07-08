@@ -1025,6 +1025,17 @@
             <input class="auth-input" id="signup-email" type="email" placeholder="name@domain.com" autocomplete="email" required>
           </div>
           <div class="auth-field">
+            <button class="auth-submit" id="signup-send-code" type="button" style="min-height:44px;">
+              <span class="btn-text">Send Email Code</span>
+              <span class="spinner" style="display:none;"></span>
+            </button>
+            <p id="signup-code-status" class="auth-switch" style="margin:8px 0 0;text-align:left;"></p>
+          </div>
+          <div class="auth-field">
+            <label class="auth-label" for="signup-email-code">Email Verification Code</label>
+            <input class="auth-input" id="signup-email-code" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit code" autocomplete="one-time-code" required>
+          </div>
+          <div class="auth-field">
             <label class="auth-label" for="signup-phone">Phone Number</label>
             <input class="auth-input" id="signup-phone" type="tel" placeholder="+8801XXXXXXXXX" autocomplete="tel" required>
           </div>
@@ -1050,7 +1061,7 @@
     </div>
   </div>
 
-  <script src="app.js?v=20260708-email-verify-2"></script>
+  <script src="app.js?v=20260708-inline-signup-code"></script>
 </body>
 
 </html>

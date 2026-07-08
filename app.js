@@ -139,6 +139,42 @@
       }
     }
 
+    function setSignupCodeStatus(message, isError = false) {
+      const status = document.getElementById('signup-code-status');
+      if (!status) return;
+      status.textContent = message || '';
+      status.style.color = isError ? '#b91c1c' : '#047857';
+    }
+
+    async function sendSignupCode() {
+      const email = document.getElementById('signup-email').value.trim();
+      if (!email) {
+        showAlert('Enter your email address first.');
+        return;
+      }
+      const btn = document.getElementById('signup-send-code');
+      const text = btn.querySelector('.btn-text');
+      const spinner = btn.querySelector('.spinner');
+      btn.disabled = true; text.style.opacity = '0.5'; spinner.style.display = 'inline-block';
+      hideAlert();
+      setSignupCodeStatus('');
+      try {
+        const r = await fetch('/api/v1/auth/client/signup/email-code', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const d = await r.json();
+        if (!r.ok) throw new Error(readableAuthMessage(d));
+        setSignupCodeStatus(`Code sent to ${d.email || email}. Check your inbox.`);
+      } catch (err) {
+        setSignupCodeStatus(err.message || 'Could not send code.', true);
+        showAlert(err.message || 'Could not send code.');
+      } finally {
+        btn.disabled = false; text.style.opacity = '1'; spinner.style.display = 'none';
+      }
+    }
+
     panelLogin.addEventListener('submit', e => {
       e.preventDefault();
       submitForm(panelLogin, '/api/v1/auth/client/login', () => ({
@@ -146,6 +182,8 @@
         password: panelLogin.querySelector('#login-password').value
       }));
     });
+
+    document.getElementById('signup-send-code')?.addEventListener('click', sendSignupCode);
 
     panelSignup.addEventListener('submit', e => {
       e.preventDefault();
@@ -159,6 +197,7 @@
         full_name: document.getElementById('signup-fullname').value.trim(),
         business_name: document.getElementById('signup-bizname').value.trim(),
         email: document.getElementById('signup-email').value.trim(),
+        email_code: document.getElementById('signup-email-code').value.trim(),
         phone_number: document.getElementById('signup-phone').value.trim(),
         password: password,
         domain: document.getElementById('signup-domain').value.trim() || null,
