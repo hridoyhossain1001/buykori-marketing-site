@@ -94,8 +94,19 @@
     function readableAuthMessage(value, fallback = 'Authentication error.') {
       if (!value) return fallback;
       if (typeof value === 'string') return value;
+      if (Array.isArray(value)) {
+        const messages = value.map(item => readableAuthMessage(item, '')).filter(Boolean);
+        return messages.length ? messages.join(' ') : fallback;
+      }
       if (typeof value === 'object') {
-        return value.detail || value.message || value.error || fallback;
+        for (const key of ['detail', 'message', 'error', 'msg']) {
+          if (value[key]) return readableAuthMessage(value[key], fallback);
+        }
+        try {
+          return JSON.stringify(value);
+        } catch (_) {
+          return fallback;
+        }
       }
       return String(value);
     }
