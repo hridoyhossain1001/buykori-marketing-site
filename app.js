@@ -205,45 +205,8 @@
       }));
     });
 
-    // Real-Time Dashboard Live Ticker & Interaction Simulation
+    // Keep the illustrative product preview stable and predictable.
     document.addEventListener('DOMContentLoaded', () => {
-      const eventsEl = document.querySelector('.bk-metrics-mini .bk-metric-card:first-child strong');
-      const revEl = document.querySelector('.bk-metrics-mini .bk-metric-card:last-child strong');
-
-      if (eventsEl) {
-        let count = 16928;
-        setInterval(() => {
-          const increment = Math.floor(Math.random() * 3) + 1; // +1 to +3 events
-          count += increment;
-          eventsEl.textContent = count.toLocaleString('en-US');
-          
-          // Flash Indigo glow indicating active server event arrival
-          eventsEl.style.transition = 'color 0.2s ease';
-          eventsEl.style.color = '#818cf8'; 
-          setTimeout(() => {
-            eventsEl.style.color = ''; 
-          }, 500);
-        }, 3500);
-      }
-
-      if (revEl) {
-        let rev = 8742.50; // $8.7K
-        setInterval(() => {
-          const addRev = parseFloat((Math.random() * 18 + 4).toFixed(2)); // +$4 to +$22
-          rev += addRev;
-          
-          // Format as $X.XXK
-          revEl.textContent = '$' + (rev / 1000).toFixed(2) + 'K';
-          
-          // Flash Emerald Green glow indicating successful conversion payout/revenue
-          revEl.style.transition = 'color 0.2s ease';
-          revEl.style.color = '#34d399'; 
-          setTimeout(() => {
-            revEl.style.color = '';
-          }, 500);
-        }, 6500);
-      }
-
       // Sidebar menu items click simulation
       const asideItems = document.querySelectorAll('.bk-aside-nav p');
       asideItems.forEach(item => {
