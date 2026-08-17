@@ -37,7 +37,7 @@
     const linkToSignup = document.getElementById('link-to-signup');
     const linkToLogin = document.getElementById('link-to-login');
     const modalClose = document.getElementById('modal-close');
-    let selectedSignupPlan = 'growth_trial';
+    let selectedSignupPlan = 'starter_trial';
 
     function showAlert(msg) { authAlertText.textContent = msg; authAlert.style.display = 'flex'; }
     function hideAlert() { authAlert.style.display = 'none'; }
@@ -54,7 +54,7 @@
       hideAlert();
     }
 
-    function openModal(tab = 'login', signupPlan = 'growth_trial') {
+    function openModal(tab = 'login', signupPlan = 'starter_trial') {
       panelLogin.reset(); panelSignup.reset();
       selectedSignupPlan = signupPlan;
       authSuccess.style.display = 'none';
@@ -86,7 +86,7 @@
         e.preventDefault();
         openModal(
           trigger.dataset.authMode === 'login' ? 'login' : 'signup',
-          trigger.dataset.signupPlan || 'growth_trial'
+          trigger.dataset.signupPlan || 'starter_trial'
         );
       }
     });
